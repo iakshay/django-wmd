@@ -9,15 +9,15 @@
     margin-left: 108px;
 }
 
-#wmd-button-bar {
+.wmd-button-bar {
     width: 618px;
 }
 
-#wmd-preview {
+.wmd-preview {
     margin-top: 20px;
 }
 
-#wmd-preview-area { 
+.wmd-preview-area { 
     border: 1px solid #ccc;
     height: 150px;
     padding: 0 5px 0 5px;
@@ -25,19 +25,19 @@
     overflow: auto;
 }
 
-form .aligned #wmd-preview-area p {
+form .aligned .wmd-preview-area p {
     padding-left: 0;
     margin-left: 0;
 }
 
-.module #wmd-preview-area h2 {
+.module .wmd-preview-area h2 {
     background: none;
     color: #666;
     font-size: 16px;
     padding-left: 0;
 }
 
-#wmd-preview-label {
+.wmd-preview-label {
     color: #666;
     font-size: 12px;
     float: left;
