@@ -22,7 +22,7 @@ class WMDWidget(forms.Textarea):
         )
 
     def render(self, name, value, attrs=None):
-        rendered = mark_safe(u'<div class="wmd-button-bar wmd-panel" id="wmd-bar-%s"></div>' % (attrs['id'])
+        rendered = mark_safe(u'<div class="wmd-button-bar wmd-panel" id="wmd-bar-%s"></div>' % (attrs['id']))
         rendered += super(WMDWidget, self).render(name, value, attrs)
         return rendered + mark_safe(u'''
             <div id="wmd-preview-%s" class="wmd-preview">
