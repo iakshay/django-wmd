@@ -22,18 +22,18 @@ class WMDWidget(forms.Textarea):
         )
 
     def render(self, name, value, attrs=None):
-        rendered = mark_safe(u'<div id="wmd-button-bar" class="wmd-panel"></div>')
+        rendered = mark_safe(u'<div class="wmd-button-bar wmd-panel" id="wmd-bar-%s"></div>' % (attrs['id'])
         rendered += super(WMDWidget, self).render(name, value, attrs)
         return rendered + mark_safe(u'''
-            <div id="wmd-preview">
-                <div id="wmd-preview-label">Preview:</div>
-                <div id='wmd-preview-area' class="wmd-panel"></div>
+            <div id="wmd-preview-%s" class="wmd-preview">
+                <div class="wmd-preview-label">Preview:</div>
+                <div class='wmd-preview-area' class="wmd-panel"></div>
             </div>
             <script type="text/javascript">
                 setup_wmd({
                     input: "%s",
-                    button_bar: "wmd-button-bar",
-                    preview: "wmd-preview-area",
+                    button_bar: "wmd-bar-%s",
+                    preview: "wmd-preview-%s",
                     helpLink: "http://daringfireball.net/projects/markdown/syntax"
             });
             </script>
